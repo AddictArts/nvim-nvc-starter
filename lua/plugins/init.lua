@@ -1,37 +1,33 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre' -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
-  },
+	{
+		"stevearc/conform.nvim",
+		-- lazy = false,
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		keys = {
+			{
+				"<leader>F",
+				function()
+					require("conform").format({ async = true, lsp_fallback = true })
+				end,
+				mode = "",
+				desc = "Format buffer",
+			},
+		},
+		config = function()
+			require("configs.conform")
+		end,
 
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   config = function()
-  --     require("nvchad.configs.lspconfig").defaults()
-  --     require "configs.lspconfig"
-  --   end,
-  -- },
+		init = function()
+			-- If you want the formatexpr, here is the place to set it
+			vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+		end,
+	},
 
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
-  -- },
-  --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = {
+			git = { enable = true },
+		},
+	},
 }
