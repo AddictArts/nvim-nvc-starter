@@ -11,7 +11,7 @@ return {
       "<leader>G",
       ":Neogit <CR>",
       mode = "",
-      desc = "Format buffer",
+      desc = "Neogit",
     },
   },
   config = true,
