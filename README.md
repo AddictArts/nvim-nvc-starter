@@ -42,6 +42,15 @@ rustup component add rust-src
 
 ### Treesitter
 
+Markdown
+
 ```
 :TSInstall markdown markdown_inline
+```
+
+Justfile
+
+```
+# Ref: lazy load tree-sitter-just :Lazy load tree-sitter-just
+:TSInstall just
 ```
