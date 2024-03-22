@@ -8,7 +8,7 @@ return {
   },
   keys = {
     {
-      "<leader>gg",
+      "<leader>G",
       ":Neogit <CR>",
       mode = "",
       desc = "Format buffer",
