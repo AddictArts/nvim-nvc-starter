@@ -3,16 +3,17 @@ return {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
-    keys = {
-      {
-        "<leader>fF",
-        function()
-          require("conform").format { async = true, lsp_fallback = true }
-        end,
-        mode = "",
-        desc = "Format buffer",
-      },
-    },
+    -- NvChad maps <leader>fm that does it, oops
+    -- keys = {
+    --   {
+    --     "<leader>fF",
+    --     function()
+    --       require("conform").format { async = true, lsp_fallback = true }
+    --     end,
+    --     mode = "",
+    --     desc = "Format buffer",
+    --   },
+    -- },
     -- starter had the config, added above and init below for conform
     config = function()
       require "configs.conform"
