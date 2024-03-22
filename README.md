@@ -40,6 +40,18 @@ rustup component add rust-src
 :TSInstall rust # TSModuleInfo for other langs to install
 ```
 
+#### DAP
+
+```shell
+# may not need to do this with vscode and the extension already installed to $Env:USERPROFILE/.vscode/extensions
+:MasonInstall codelldb
+```
+
+```shell
+:lua local widgets=require("dap.ui.widgets"); local sidebar=widgets.sidebar(widgets.scopes); sidebar.open();
+```
+
+
 ### Treesitter
 
 Markdown
@@ -53,4 +65,10 @@ Justfile
 ```
 # Ref: lazy load tree-sitter-just :Lazy load tree-sitter-just
 :TSInstall just
+```
+
+Web - Typescript etc.
+
+```shell
+:TSInstall typescript javascript json jsdoc
 ```
