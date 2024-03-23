@@ -16,24 +16,28 @@ return {
       "<leader>rr",
       ":RustLsp runnables <CR>",
       desc = "RustLSP runnabes",
+      ft = { "rust" },
     },
     {
       mode = "n",
       "<leader>rR",
       ":RustLsp runnables",
       desc = "RustLSP runnables [args[]]?",
+      ft = { "rust" },
     },
     {
       mode = "n",
       "<leader>rx",
       ":RustLsp! runnables <CR>",
       desc = "RustLSP runnables!",
+      ft = { "rust" },
     },
     {
       mode = "n",
       "<leader>rx",
       ":RustLsp! runnables <CR>",
       desc = "RustLSP runnables!",
+      ft = { "rust" },
     },
   },
   config = function()
