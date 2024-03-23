@@ -51,7 +51,6 @@ rustup component add rust-src
 :lua local widgets=require("dap.ui.widgets"); local sidebar=widgets.sidebar(widgets.scopes); sidebar.open();
 ```
 
-
 ### Treesitter
 
 Markdown

@@ -8,7 +8,7 @@ return {
   },
   keys = {
     {
-      "<leader>G",
+      "<leader>gi",
       ":Neogit <CR>",
       mode = "",
       desc = "Neogit",
