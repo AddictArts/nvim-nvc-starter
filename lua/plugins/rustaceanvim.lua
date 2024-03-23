@@ -4,10 +4,10 @@ return {
   dependencies = {
     {
       "lvimuser/lsp-inlayhints.nvim",
-      "mfussenegger/nvim-dap",
-      "jay-babu/mason-nvim-dap.nvim",
       opts = {},
     },
+    "mfussenegger/nvim-dap",
+    "jay-babu/mason-nvim-dap.nvim",
   },
   ft = { "rust" },
   keys = {
