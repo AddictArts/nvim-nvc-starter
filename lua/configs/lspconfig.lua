@@ -7,6 +7,7 @@ local servers = {
   "html",
   "cssls",
   "dockerls",
+  "yamlls",
 }
 
 -- lsps with default config

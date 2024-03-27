@@ -32,7 +32,7 @@ scoop install main/luarocks
 
 ### Treesitter
 
-> :TSInstall luadoc rust markdown markdown_inline typescript javascript json jsdoc dockerfile
+> :TSInstall luadoc rust markdown markdown_inline typescript javascript json jsdoc dockerfile yaml
 
 Markdown
 
@@ -61,7 +61,7 @@ Docker
 
 ### Mason
 
-> :MasonInstall codelldb dockerfile-language-server
+> :MasonInstall codelldb dockerfile-language-server yaml-language-server
 
 ```
 # may not need to do this with vscode and the extension already installed to $Env:USERPROFILE/.vscode/extensions
