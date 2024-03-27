@@ -32,7 +32,7 @@ scoop install main/luarocks
 
 ### Treesitter
 
-> :TSInstall luadoc markdown markdown_inline typescript javascript json jsdoc dockerfile
+> :TSInstall luadoc rust markdown markdown_inline typescript javascript json jsdoc dockerfile
 
 Markdown
 
@@ -59,7 +59,22 @@ Docker
 :TSInstall dockerfile
 ```
 
-### Rust
+### Mason
+
+> :MasonInstall codelldb dockerfile-language-server
+
+```
+# may not need to do this with vscode and the extension already installed to $Env:USERPROFILE/.vscode/extensions
+:MasonInstall codelldb
+```
+
+Docker
+
+```
+:MasonInstall dockerfile-language-server
+```
+
+## Rust
 
 Install rust-analyzer and rust-src
 
@@ -68,15 +83,11 @@ rustup component add rust-analyzer
 rustup component add rust-src
 
 # neovim
-:TSInstall rust # TSModuleInfo for other langs to install
+# :TSInstall rust # TSModuleInfo for other langs to install
 ```
 
-#### DAP
+### DAP
 
-```shell
-# may not need to do this with vscode and the extension already installed to $Env:USERPROFILE/.vscode/extensions
-:MasonInstall codelldb
-```
 
 ```shell
 :lua local widgets=require("dap.ui.widgets"); local sidebar=widgets.sidebar(widgets.scopes); sidebar.open();
