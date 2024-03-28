@@ -15,4 +15,11 @@ return {
     },
   },
   config = true,
+  opts = {
+    graph_style = "unicode", -- or "ascii" the default
+    -- integrations = {
+    --   telescope = nil,
+    --   diffview = true,
+    -- },
+  },
 }

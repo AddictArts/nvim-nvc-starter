@@ -8,6 +8,7 @@ local servers = {
   "cssls",
   "dockerls",
   "yamlls",
+  "bashls",
 }
 
 -- lsps with default config

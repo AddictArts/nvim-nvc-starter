@@ -1,3 +1,22 @@
+# Install nvim
+
+** Windows **
+
+`winget install Neovim.Neovim`
+
+**Linux**
+
+```shell
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+
+# .bashrc
+export PATH="$PATH:/opt/nvim-linux64/bin"
+```
+
+---
+
 # config/nvim
 
 ## From NvChad starter config
@@ -32,13 +51,7 @@ scoop install main/luarocks
 
 ### Treesitter
 
-> :TSInstall luadoc rust markdown markdown_inline typescript javascript json jsdoc dockerfile yaml
-
-Markdown
-
-```
-:TSInstall markdown markdown_inline
-```
+> :TSInstall luadoc rust markdown markdown_inline typescript javascript json jsdoc dockerfile yaml bash
 
 Just
 
@@ -53,25 +66,13 @@ Web - Typescript etc.
 :TSInstall typescript javascript json jsdoc
 ```
 
-Docker
-
-```
-:TSInstall dockerfile
-```
-
 ### Mason
 
-> :MasonInstall codelldb dockerfile-language-server yaml-language-server
+> :MasonInstall codelldb dockerfile-language-server yaml-language-server bash-language-server bash-debug-adapter
 
 ```
 # may not need to do this with vscode and the extension already installed to $Env:USERPROFILE/.vscode/extensions
 :MasonInstall codelldb
-```
-
-Docker
-
-```
-:MasonInstall dockerfile-language-server
 ```
 
 ## Rust
