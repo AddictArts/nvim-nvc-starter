@@ -89,8 +89,19 @@ rustup component add rust-src
 
 ### DAP
 
-
 ```shell
 :lua local widgets=require("dap.ui.widgets"); local sidebar=widgets.sidebar(widgets.scopes); sidebar.open();
 ```
 
+#### dapui
+
+Install control icons
+
+```
+npm i -g @vscode/codicons
+```
+
+```
+:lua require("dapui").setup{}
+:lua require("dapui").open()
+```
