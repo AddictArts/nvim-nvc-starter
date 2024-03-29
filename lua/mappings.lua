@@ -11,3 +11,16 @@ map("i", "jk", "<ESC>")
 map("n", "<leader>rcu", function()
   require("crates").upgrade_all_crates()
 end, { desc = "Update crates" })
+
+map("n", "<leader>du", function()
+  local dui = require "dapui"
+
+  dui.setup()
+  dui.open()
+end, { desc = "Dapui open" })
+
+map("n", "<leader>dc", function()
+  local dui = require "dapui"
+
+  dui.close()
+end, { desc = "Dapui open" })
