@@ -12,6 +12,8 @@ map("n", "<leader>rcu", function()
   require("crates").upgrade_all_crates()
 end, { desc = "Update crates" })
 
+map("n", "<leader>tb", "<cmd>:DapToggleBreakpoint <CR>", { desc = "Toggle breakpoint" })
+
 map("n", "<leader>do", function()
   local dui = require "dapui"
 
